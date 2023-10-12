@@ -8,12 +8,12 @@ export default class NumberParser {
     ).formatToParts(12345.6)
 
     const {
-      value: DECIMAL
-    } = PARTS.find(({ type }) => type === 'decimal')
-
-    const {
       value: GROUP
     } = PARTS.find(({ type }) => type === 'group')
+
+    const {
+      value: DECIMAL
+    } = PARTS.find(({ type }) => type === 'decimal')
 
     const CHARS = (
       new Intl.NumberFormat(locale, { useGrouping: false })
