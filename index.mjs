@@ -48,7 +48,7 @@ export default class NumberParser {
   }
 }
 
-export function fromString (char) {
+export function fromChar (char) {
   const numberParser = new NumberParser()
   return (
     numberParser.fromChar(String(char)) ?? NaN
