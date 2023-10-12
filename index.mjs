@@ -4,7 +4,7 @@
 export default class NumberParser {
   constructor (locale = 'en-GB') {
     const PARTS = (
-      new Intl.NumberFormat(locale, { useGrouping: true }) // true is default
+      new Intl.NumberFormat(locale) // `{ useGrouping: true }` is default
     ).formatToParts(12345.6)
 
     const CHARS = (
