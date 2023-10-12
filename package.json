@@ -23,7 +23,7 @@
     "@babel/eslint-parser": "^7.22.15",
     "@babel/preset-env": "^7.22.20",
     "@sequencemedia/hooks": "^1.0.457",
-    "@types/node": "^20.8.3",
+    "@types/node": "^20.8.5",
     "core-js": "^3.33.0",
     "eslint": "^8.51.0",
     "eslint-config-standard": "^17.1.0",
