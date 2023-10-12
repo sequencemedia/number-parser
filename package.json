@@ -1,0 +1,32 @@
+{
+  "name": "@sequencemedia/number-parser",
+  "version": "0.0.0",
+  "main": "./index.mjs",
+  "type": "module",
+  "author": {
+    "name": "Jonathan Perry for Sequence Media Limited",
+    "email": "sequencemedia@sequencemedia.net",
+    "url": "https://sequencemedia.net"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sequencemedia/number-parser.git"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .mjs,.cjs",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/preset-env": "^7.22.20",
+    "@sequencemedia/hooks": "^1.0.457",
+    "@types/node": "^20.8.3",
+    "core-js": "^3.33.0",
+    "eslint": "^8.51.0",
+    "eslint-config-standard": "^17.1.0",
+    "husky": "^8.0.3"
+  }
+}
