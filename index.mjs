@@ -24,30 +24,38 @@ export default class NumberParser {
     const chars = new RegExp(`[${CHARS.join('')}]`, 'g')
     const charNumberMap = new Map(CHARS.map((d, n) => [d, n]))
 
-    function toNumberFrom (char) {
+    function getNumberFor (char) {
       return (
         charNumberMap.get(char)
       )
     }
 
-    function parse (string) {
-      const number = string.trim()
-        .replace(group, '')
-        .replace(decimal, '.')
-        .replace(chars, toNumberFrom)
-
+    function fromString (string) {
       return (
-        number
-          ? Number(number)
+        string.trim()
+          .replace(group, '')
+          .replace(decimal, '.')
+          .replace(chars, getNumberFor)
+      )
+    }
+
+    function toNumber (string) {
+      return (
+        string
+          ? Number(string)
           : NaN
       )
+    }
+
+    function parse (string) {
+      return toNumber(fromString(string))
     }
 
     this.parse = parse
   }
 }
 
-export function psrse (string) {
+export function parse (string) {
   const numberParser = new NumberParser()
   return (
     numberParser.parse(String(string))

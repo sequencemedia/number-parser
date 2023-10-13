@@ -1,8 +1,8 @@
 const debug = require('debug')
 
-const log = debug('@sequencemedia/strip-ansi')
+const log = debug('@sequencemedia/number-parser')
 
-log('`strip-ansi` is awake')
+log('`number-parser` is awake')
 
 const {
   env: {
