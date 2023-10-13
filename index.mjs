@@ -22,11 +22,11 @@ export default class NumberParser {
     const group = new RegExp(`[${GROUP}]`, 'g')
     const decimal = new RegExp(`[${DECIMAL}]`)
     const chars = new RegExp(`[${CHARS.join('')}]`, 'g')
-    const charsMap = new Map(CHARS.map((d, n) => [d, n]))
+    const charNumberMap = new Map(CHARS.map((d, n) => [d, n]))
 
-    function fromChar (char) {
+    function toNumberFrom (char) {
       return (
-        charsMap.get(char)
+        charNumberMap.get(char)
       )
     }
 
@@ -34,7 +34,7 @@ export default class NumberParser {
       const number = string.trim()
         .replace(group, '')
         .replace(decimal, '.')
-        .replace(chars, fromChar)
+        .replace(chars, toNumberFrom)
 
       return (
         number
@@ -43,19 +43,11 @@ export default class NumberParser {
       )
     }
 
-    this.fromChar = fromChar
     this.parse = parse
   }
 }
 
-export function fromChar (char) {
-  const numberParser = new NumberParser()
-  return (
-    numberParser.fromChar(String(char)) ?? NaN
-  )
-}
-
-export function toNumber (string) {
+export function psrse (string) {
   const numberParser = new NumberParser()
   return (
     numberParser.parse(String(string))
