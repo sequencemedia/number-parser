@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/number-parser",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Implements https://observablehq.com/@mbostock/localized-number-parsing",
   "main": "./index.mjs",
   "type": "module",
