@@ -22,7 +22,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.6",
     "@babel/eslint-parser": "^7.23.3",
-    "@babel/preset-env": "^7.23.6",
+    "@babel/preset-env": "^7.23.7",
     "@sequencemedia/hooks": "^1.0.470",
     "@types/node": "^20.10.5",
     "core-js": "^3.35.0",
