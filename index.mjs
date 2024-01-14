@@ -70,8 +70,8 @@ export default class NumberParser {
   }
 }
 
-export function parse (value) {
-  const numberParser = new NumberParser()
+export function parse (value, locale) {
+  const numberParser = new NumberParser(locale)
   return (
     numberParser.parse(value)
   )
