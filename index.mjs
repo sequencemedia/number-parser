@@ -57,7 +57,7 @@ export default class NumberParser {
     }
 
     /**
-     * Parse value to a number
+     * Parse `value` to a number or NaN
      *
      * @param {any} value
      * @returns {number} A number or NaN
