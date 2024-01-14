@@ -1,6 +1,15 @@
 /**
  * https://observablehq.com/@mbostock/localized-number-parsing
  */
+
+function findGroup ({ type }) {
+  return type === 'group'
+}
+
+function findDecimal ({ type }) {
+  return type === 'decimal'
+}
+
 export default class NumberParser {
   constructor (locale = 'en-GB') {
     const PARTS = (
@@ -9,11 +18,11 @@ export default class NumberParser {
 
     const {
       value: GROUP
-    } = PARTS.find(({ type }) => type === 'group')
+    } = PARTS.find(findGroup)
 
     const {
       value: DECIMAL
-    } = PARTS.find(({ type }) => type === 'decimal')
+    } = PARTS.find(findDecimal)
 
     const CHARS = (
       new Intl.NumberFormat(locale, { useGrouping: false })
@@ -47,17 +56,23 @@ export default class NumberParser {
       )
     }
 
-    function parse (string) {
-      return toNumber(fromString(string))
+    /**
+     * Parse value to a number
+     *
+     * @param {any} value
+     * @returns {number} A number or NaN
+     */
+    function parse (value) {
+      return toNumber(fromString(String(value)))
     }
 
     this.parse = parse
   }
 }
 
-export function parse (string) {
+export function parse (value) {
   const numberParser = new NumberParser()
   return (
-    numberParser.parse(String(string))
+    numberParser.parse(value)
   )
 }
