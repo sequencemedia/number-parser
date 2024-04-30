@@ -20,10 +20,10 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.4",
-    "@babel/eslint-parser": "^7.24.1",
-    "@babel/preset-env": "^7.24.4",
-    "@sequencemedia/hooks": "^1.0.489",
+    "@babel/core": "^7.24.5",
+    "@babel/eslint-parser": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@sequencemedia/hooks": "^1.0.490",
     "@types/node": "^20.12.7",
     "core-js": "^3.37.0",
     "eslint": "8.57.0",
