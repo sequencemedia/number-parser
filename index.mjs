@@ -33,18 +33,18 @@ export default class NumberParser {
     const chars = new RegExp(`[${CHARS.join('')}]`, 'g')
     const charNumberMap = new Map(CHARS.map((d, n) => [d, n]))
 
-    function getNumberFor (char) {
-      return (
-        charNumberMap.get(char)
-      )
-    }
-
     function fromString (string) {
       return (
         string.trim()
           .replace(group, '')
           .replace(decimal, '.')
           .replace(chars, getNumberFor)
+      )
+    }
+
+    function getNumberFor (char) {
+      return (
+        charNumberMap.get(char)
       )
     }
 
@@ -62,16 +62,21 @@ export default class NumberParser {
      * @param {any} value
      * @returns {number} A number or NaN
      */
-    function parse (value) {
-      return toNumber(fromString(String(value)))
+    this.parse = function parse (value) {
+      return (
+        toNumber(
+          fromString(
+            String(value)
+          )
+        )
+      )
     }
-
-    this.parse = parse
   }
 }
 
 export function parse (value, locale) {
   const numberParser = new NumberParser(locale)
+
   return (
     numberParser.parse(value)
   )
