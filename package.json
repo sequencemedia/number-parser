@@ -12,7 +12,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sequencemedia/number-parser.git"
+    "url": "git+https://github.com/sequencemedia/number-parser.git"
   },
   "scripts": {
     "lint": "eslint .",
