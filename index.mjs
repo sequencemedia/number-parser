@@ -1,5 +1,5 @@
 /**
- * https://observablehq.com/@mbostock/localized-number-parsing
+ *  https://observablehq.com/@mbostock/localized-number-parsing
  */
 
 function findGroup ({ type }) {
@@ -59,8 +59,8 @@ export default class NumberParser {
     /**
      * Parse `value` to a number or NaN
      *
-     * @param {any} value
-     * @returns {number} A number or NaN
+     *  @param {any} value
+     *  @returns {number} A number or NaN
      */
     this.parse = function parse (value) {
       return (
