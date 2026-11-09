@@ -19,6 +19,9 @@
     "lint:fix": "npm run lint -- --fix",
     "prepare": "node husky.mjs"
   },
+  "allowScripts": {
+    "core-js@3.51.0": true
+  },
   "devDependencies": {
     "@babel/core": "7.29.7",
     "@babel/preset-env": "7.29.7",
@@ -27,8 +30,5 @@
     "eslint": "10.14.0",
     "globals": "^17.14.0",
     "husky": "^9.1.7"
-  },
-  "allowScripts": {
-    "core-js@3.51.0": true
   }
 }
